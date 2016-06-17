@@ -15,10 +15,10 @@
         <script src="dist/js/angular-route.js"></script>
         <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>     
         <script src="node_modules/satellizer/satellizer.js"></script>    
-        <script src="app.js"></script>        
-        <script src="controllers/authController.js"></script>  
-        <script src="controllers/welcomeController.js"></script>          
-        <script src="controllers/entitySubmissionController.js"></script>
-        <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.min.js"></script>        
+        <!--<script src="app.js"></script>
+         <script src="controllers/authController.js"></script>  
+         <script src="controllers/welcomeController.js"></script>          
+         <script src="controllers/entitySubmissionController.js"></script>
+         <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.min.js"></script>-->    
     </body>
 </html>

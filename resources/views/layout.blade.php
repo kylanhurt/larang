@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="dataGoMain">
+<html lang="en" <!--ng-app="dataGoMain"-->>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,10 +72,10 @@
         <script src="dist/js/angular-route.js"></script>
         <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>     
         <script src="node_modules/satellizer/satellizer.js"></script>    
-        <script src="js/app.js"></script>        
+        <!--<script src="js/app.js"></script>        
         <script src="js/controllers/authController.js"></script>  
         <script src="js/controllers/welcomeController.js"></script>          
         <script src="js/controllers/entitySubmissionController.js"></script>
-        <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.min.js"></script>              
+        <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.min.js"></script>-->              
     </body>
 </html>
