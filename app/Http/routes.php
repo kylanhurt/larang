@@ -11,8 +11,24 @@
 |
 */
 Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
 
 Route::get('/about-us', function() {
 	return 'all skrillex is very good :D';
+});
+
+Route::resource('api/entity', 'EntitiesController');
+
+Route::get('/about', 'PagesController@about');
+Route::post('/api/user/register/', 'UsersController@create');
+Route::get('api/csrf', function(){ 
+    return csrf_token();
+});
+Route::resource('api/authenticate', 'AuthenticateController', ['only' => ['index']]);
+Route::post('api/authenticate', 'AuthenticateController@authenticate');
+Route::get('api/authenticate/user', 'AuthenticateController@getAuthenticatedUser');
+
+Route::get('api/users/{username}', function($username) {
+    $username_client = new Guzzle\Service\Client('https://api.github.com/');
+    $response = $username_client->get("users/$username")->send();
+    echo $response->getBody();
 });
