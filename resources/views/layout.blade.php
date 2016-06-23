@@ -24,7 +24,7 @@
         <![endif]-->
     </head>
     <body ng-controller="mainCtrl" >
-        <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="AuthController">
+        <nav class="navbar navbar-inverse navbar-fixed-top" >
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -39,10 +39,10 @@
                     <li ng-show="authenticated"><a href="#" ng-click="logout()" style="color:white;">Logout</a></li>                  
                     <form class="navbar-form navbar-right" ng-hide="authenticated">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="login-email" ng-model="email">
+                            <input type="email" class="form-control" id="login-email" ng-model="user.email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="login-password" ng-model="password">
+                            <input type="password" class="form-control" id="login-password" ng-model="user.password">
                         </div>
                         <button type="submit" class="btn btn-success" ng-click="login()">Login</button>
                     </form>
