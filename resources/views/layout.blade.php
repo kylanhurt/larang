@@ -10,13 +10,13 @@
         <link rel="icon" href="../../favicon.ico">
         <title>Welcome to dataGo | dataGo</title>
         <!-- Bootstrap core CSS -->
-        <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="css/jumbotron.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">        
+        <link href="/css/jumbotron.css" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">        
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="docs/assets/js/ie-emulation-modes-warning.js"></script>
+        <script src="/docs/assets/js/ie-emulation-modes-warning.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">dataGo</a>
+                    <a class="navbar-brand" href="/">dataGo</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-show="authenticated"><a href="#" ng-click="logout()" style="color:white;">Logout</a></li>                  
@@ -64,18 +64,18 @@
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
-        <script src="dist/js/jquery-2.2.0.min.js"></script>
-        <script src="docs/dist/js/bootstrap.min.js"></script>
+        <script src="/dist/js/jquery-2.2.0.min.js"></script>
+        <script src="/docs/dist/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-        <script src="dist/js/angular.js"></script>   
-        <script src="dist/js/angular-route.js"></script>
-        <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>     
-        <script src="node_modules/satellizer/satellizer.js"></script>    
-        <script src="js/app.js"></script>
-        <script src="js/controllers/authController.js"></script>  
-        <script src="js/controllers/welcomeController.js"></script><!--          
-        <script src="js/controllers/entitySubmissionController.js"></script>
-        <script src="bower_components/angular-encode-uri/dist/angular-encode-uri.min.js"></script>-->              
+        <script src="/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="/dist/js/angular.js"></script>   
+        <script src="/dist/js/angular-route.js"></script>
+        <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>     
+        <script src="/node_modules/satellizer/satellizer.js"></script>    
+        <script src="/js/app.js"></script>
+        <script src="/js/controllers/authController.js"></script>  
+        <script src="/js/controllers/welcomeController.js"></script><!--          
+        <script src="/bower_components/angular-encode-uri/dist/angular-encode-uri.min.js"></script>-->        
+        @yield('footerCode')
     </body>
 </html>

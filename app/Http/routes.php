@@ -16,7 +16,8 @@ Route::get('/about-us', function() {
 	return 'all skrillex is very good :D';
 });
 
-Route::resource('api/entity', 'EntitiesController');
+//Route::resource('/entity', 'EntitiesController');
+Route::get('/entity/new/', 'PagesController@createEntity');
 
 Route::get('/about', 'PagesController@about');
 Route::post('/api/user/register/', 'UsersController@create');

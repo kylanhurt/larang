@@ -27,6 +27,12 @@ class entitiesController extends Controller
     {
         //
     }
+    
+    
+    public function new_view () {
+        
+    }
+    
     /**
      * Show the form for creating a new resource.
      *

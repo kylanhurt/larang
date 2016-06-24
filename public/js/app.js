@@ -27,7 +27,7 @@ angular.module("dataGoMain", ['ngRoute', 'ui.router', 'satellizer'])
                     url: '',
                     views:{
                         'main-cont': {
-                            templateUrl: 'views/home.html'
+                            templateUrl: '/views/home.html'
                         }
                     },
                     controller: "WelcomeController as wc"
@@ -37,7 +37,7 @@ angular.module("dataGoMain", ['ngRoute', 'ui.router', 'satellizer'])
                     url: 'entity/new',
                     views: {
                         'main-cont': {
-                            templateUrl: 'views/entity.new.html'
+                            templateUrl: '/views/entity.new.html'
                         }
                     },
                     controller: 'entitySubmissionController'
@@ -47,8 +47,6 @@ angular.module("dataGoMain", ['ngRoute', 'ui.router', 'satellizer'])
             console.log(localStorage);
             if(localStorage.getItem('satellizer_token')) {
                 $rootScope.authenticated = true;
-                console.log('initial load, authenticated = true');
-                $
             }
             $rootScope.$on('$stateChangeStart', function (event, toState) {
                 var user = JSON.parse(localStorage.getItem('user'));
@@ -79,7 +77,7 @@ function MainCtrl($scope, $rootScope, $state, $auth,$http) {
         }
 
         $auth.login(credentials).then(function() {
-            return $http.get('api/authenticate/user')
+            return $http.get('/api/authenticate/user')
         .then(function(response) {
             var user = JSON.stringify(response.data.user);
             localStorage.setItem('user', user);
@@ -97,7 +95,6 @@ function MainCtrl($scope, $rootScope, $state, $auth,$http) {
 
     function logout() {
         //$auth.logout() itself will remove satellizer_token from local storage.
-        console.log('in logout function');
         $auth.logout().then(function() {
             localStorage.removeItem('user');
             $rootScope.authenticated = false;

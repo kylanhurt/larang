@@ -17,4 +17,8 @@ class PagesController extends Controller
     	$name = 'Kylan Hurt';
     	return view('pages.about')->with('name', $name);
     }
+    
+    public function createEntity() {
+        return view('pages.createEntity');
+    }
 }
